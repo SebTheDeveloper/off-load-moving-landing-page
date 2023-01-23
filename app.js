@@ -66,10 +66,9 @@ app.post('/send', (req, res) => {
   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
   
-  res.render('main', {
+  res.redirect('success', {
     layout: false,
-    msg: 'email has been sent'
   });
 });
 
-app.listen(3000, () => console.log('Server started...'));
+app.listen(3000, () => console.log('Server started on port 3000...'));
