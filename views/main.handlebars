@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/style.css">
+    <script src="public/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>Off Load Moving Co.</title>
+</head>
+<body>
+    <header>
+        <img src="public/images/logo.webp" alt="Off-Load Moving Logo">
+        <div class="phone-cards">
+            <div class="phone-card">
+                <img src="public/images/phone-dial.png" alt="Phone Dial" class="phone-dial" />
+                <div class="phone-text">
+                    <p>Call for a Quote</p>
+                    <p>
+                        <a href="tel:757-749-7212" class="call-num">(757) 749-7212</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+    <div class="form-section">
+        <div class="form-wrapper">
+        <h3>Get a <span>Free</span> Quote</h3>
+        <span class="line"></span>
+        <form action="send" method="post" autocomplete="off">
+            <div class="inputs">
+                <label for="firstName">First Name</label>
+                <input type="text" placeholder="Your First Name" title="Enter Your First Name" autocomplete="false" name="firstName" id="firstName" minlength="2" required autofocus>
+            </div>
+            <div class="inputs">
+                <label for="lastName">Last Name</label>
+                <input type="text" placeholder="Your Last Name" title="Enter Your Last Name" name="lastName" id="lastName" minlength="2" required>
+            </div>
+            <div class="inputs">
+                <label for="originZip">Origin Zip Code</label>
+                <input type="text" placeholder="Pickup Zip Code" title="Enter the Pickup Zip Code (5 Digits)" name="originZip" id="originZip" required maxlength="5" minlength="5">
+            </div>
+            <div class="inputs">
+                <label for="destinationZip">Destination Zip Code</label>
+                <input type="text" placeholder="Drop-Off Zip Code" title="Enter the Drop-Off Zip Code (5 Digits)" name="destinationZip" id="destinationZip" required maxlength="5" minlength="5">
+            </div>
+            <div class="inputs">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Email Address" title="Enter Your Email Address" name="email" id="email" required>
+            </div>
+            <div class="inputs">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" placeholder="Your Phone Number" title="Enter Your Phone Number" name="phoneNumber" id="phoneNumber" minlength="10" maxlength="11" required>
+            </div>
+            <div class="inputs">
+                <label for="moveDate">Pickup Date</label>
+                <input type="date" placeholder="MM/DD/YY" title="Requested Pickup Date" name="moveDate" id="moveDate" required>
+            </div>
+            <div class="inputs">
+                <label for="bedrooms" placeholder="Number of Bedrooms">How Many Bedrooms?</label>
+                <select name="bedrooms" id="bedrooms" title="Enter the Move Size" required>
+                    <option disabled selected value="">--Select an Option--</option>
+                    <option value="1 Bedroom">1 Bedroom</option>
+                    <option value="2 Bedrooms">2 Bedrooms</option>
+                    <option value="3 Bedrooms">3 Bedrooms</option>
+                    <option value="4 Bedrooms or More">4 Bedrooms+</option>
+                </select>
+            </div>
+            <button type="submit">GET QUOTE</button>
+        </form>
+        <span class="line"></span>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <div class="footer-text">
+            <div class="left-footer">
+                <a href="https://www.instagram.com/off_load_moving_/" target="_blank"><img src="public/images/instagram.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/OffLOADMoving/" target="_blank"><img src="public/images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/in/briar-baughman-312133191/" target="_blank"><img src="public/images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <div class="right-footer">
+            <p>
+                <a href="mailto:move@offloadmoving.com"
+                >move@offloadmoving.com</a
+                >
+            </p>
+            <p>Phone: <a href="tel:757-749-7212" class="footer-phone">(757) 749-7212</a></p>
+            <p>
+                <a href="https://offloadmoving.com/" target="_blank"
+                >www.OffLoadMoving.com</a
+                >
+            </p>
+            </div>
+        </div>
+        <div id="flex">
+            <p>2865 Seaboard Road, Virginia Beach, VA, 23456</p>
+            <p>© 2023 Off-Load Moving Co. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
