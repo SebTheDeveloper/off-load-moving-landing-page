@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
   res.render('main', { layout: false });
 });
 
+app.get('/success', (req, res) => {
+  res.render('success', { layout: false });
+});
+
 app.post('/send', (req, res) => {
   const output = `
   <p>You have a new quote request</p>
@@ -37,7 +41,7 @@ app.post('/send', (req, res) => {
   `;
 
   // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     host: "smtp-relay.sendinblue.com",
     port: 587,
     secure: false, // true for 465, false for other ports
@@ -51,11 +55,11 @@ app.post('/send', (req, res) => {
   });
 
   // send mail with defined transport object
-  let info = transporter.sendMail({
+  const info = transporter.sendMail({
     from: '"Off-Load Movers Landing Page" <moverquoter@gmail.com>', // sender address
     to: "foyerjustin26@gmail.com", // list of receivers
     subject: "*New* Off-Load Movers Lead", // Subject line
-    text: "Hello world?", // plain text body
+    text: "Hello world", // plain text body
     html: output, // html body
   });
 
@@ -66,9 +70,8 @@ app.post('/send', (req, res) => {
   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
   
-  res.redirect('success', {
-    layout: false,
-  });
+  res.redirect('success');
+  
 });
 
 app.listen(3000, () => console.log('Server started on port 3000...'));
